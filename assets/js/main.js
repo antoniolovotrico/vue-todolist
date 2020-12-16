@@ -13,7 +13,9 @@ let app = new Vue({
         // create an empty key, this stands for our input in Dom 
         newTask : "",
         // add an image to pass dinamically to the DOM
-        image : "./assets/img/todoimg.png",     
+        image : "./assets/img/todoimg.png", 
+        // create an empty key to show message of no task to do  
+        message : ""  
     },
     //create two function in methods, one to add tasks and another to remove them.
     methods: {
@@ -25,6 +27,10 @@ let app = new Vue({
         },
         removeFunc() {
             this.toDo.splice(0,1);
+            //Set condition to give proper message when there is no task to do in the list
+            if (this.toDo.length < 1) {
+                this.message = "Pomeriggio Libero!!!!"
+            }
         }
     }
 })
