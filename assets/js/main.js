@@ -7,16 +7,24 @@ let app = new Vue({
             "Schierare formazione Fantacalcio",
             "Esercitarsi con la chitarra",
             "Tagliare i capelli",
-            "completare l'esercizio",
+            "Completare l'esercizio",
             
         ],
+        // create an empty key, this stands for our input in Dom 
         newTask : "",
         // add an image to pass dinamically to the DOM
         image : "./assets/img/todoimg.png",     
     },
+    //create two function in methods, one to add tasks and another to remove them.
     methods: {
         addFunc() {
+            //Set conditions to ignore empty or to short tasks
+            if (this.newTask.length > 3){
             this.toDo.push(this.newTask);
+            }
+        },
+        removeFunc() {
+            this.toDo.splice();
         }
     }
 })

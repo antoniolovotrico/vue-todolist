@@ -16,6 +16,7 @@ body {
 #app{
     text-align: center;
 }
+
 img{
     width: 400px;
     padding: 50px;
@@ -24,4 +25,21 @@ img{
 
 h1{
     padding: 20px;
+}
+
+ul {
+    list-style: square;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.btn_list{
+    border-radius: 100%;
+    font-size: 1.5rem;
+    
 }
