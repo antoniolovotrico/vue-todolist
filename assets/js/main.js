@@ -24,7 +24,7 @@ let app = new Vue({
             }
         },
         removeFunc() {
-            this.toDo.splice();
+            this.toDo.splice(0,1);
         }
     }
 })
