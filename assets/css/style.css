@@ -14,8 +14,14 @@ body {
     justify-content: center;
 }
 #app{
-    align-content: center;
+    text-align: center;
 }
 img{
     width: 400px;
+    padding: 50px;
+    display: block;
+}
+
+h1{
+    padding: 20px;
 }

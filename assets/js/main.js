@@ -6,5 +6,10 @@ let app = new Vue({
         toDo : ["Schierare formazione Fantacalcio","Esercitarsi con la chitarra","Tagliare i capelli","completare l'esercizio"],
         // add an image to pass dinamically to the DOM
         image : "./assets/img/todoimg.png"
+    },
+    methods: {
+        addFunc() {
+            
+        }
     }
 })
