@@ -25,8 +25,8 @@ let app = new Vue({
             this.toDo.push(this.newTask);
             }
         },
-        removeFunc() {
-            this.toDo.splice(0,1);
+        removeFunc(i) {
+            this.toDo.splice(i,1);
             //Set condition to give proper message when there is no task to do in the list
             if (this.toDo.length < 1) {
                 this.message = "Pomeriggio Libero!!!!"
