@@ -16,7 +16,9 @@ let app = new Vue({
         image : "./assets/img/todoimg.png", 
         // create an empty key to show message of no task to do 
         complete : "",
-        compleArr : []
+        compleArr : [],
+        delete : "",
+        deleteArr : []
     },
     //create two function in methods, one to add tasks and another to remove them.
     methods: {
@@ -26,10 +28,19 @@ let app = new Vue({
             this.toDo.push(this.newTask);
             }
         },
-        removeFunc(i) {
+        completeFunc(i) {
             this.complete = this.toDo.splice(i,1);
             // console.log(this.complete);
             this.compleArr.push(this.complete);
-        }
+        },
+        modifyFunc() {
+            document.createElement("input");
+            
+        },
+        removeFunc(i) {
+            this.delete = this.compleArr.splice(i,1);
+            // console.log(this.complete);
+            this.deleteArr.push(this.delete);
+        },
     }
 })
