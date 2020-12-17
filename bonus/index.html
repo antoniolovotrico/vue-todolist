@@ -24,7 +24,7 @@
                 </ul>
                 <h2 v-else>Niente da fare, pomeriggio Libero!!!</h2>
                 <ul>
-                    <li v-for="(done,i) in complete">{{done}}
+                    <li v-for="done in compleArr">{{done}}
                         <button class="btn_list" @click="removeFunc(i)">X</button>
                     </li>
                 </ul>

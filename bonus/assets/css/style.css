@@ -46,7 +46,6 @@ ul {
     list-style: square;
     background-color: beige;
     border-radius: 5%;
-    padding: 10px;
     margin: 10px;
 }
 
@@ -54,6 +53,7 @@ li {
     display: flex;
     justify-content: space-between;
     padding: 5px;
+    margin: 5px;
     font-size: 1.5rem;
 }
 
