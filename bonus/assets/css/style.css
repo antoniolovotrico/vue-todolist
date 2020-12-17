@@ -55,8 +55,7 @@ li {
     font-size: 1.5rem;
 }
 
-.btn_list{
-    border-radius: 100%;
-    font-size: 1.5rem;
-    
+i{
+    font-size: 1.5rem; 
+    margin:5px;
 }

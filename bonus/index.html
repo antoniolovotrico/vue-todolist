@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
         <title>Vue-ToDoList</title>
     </head>
     <body>
@@ -21,8 +22,9 @@
                 <div>
                     <h2>To Do</h2>
                     <ul v-if="toDo.length">
-                        <li v-for="(quest,i) in toDo"><button class="btn_list" @click="modifyFunc(i)">M</button>{{quest}}
-                            <button class="btn_list" @click="completeFunc(i)">D</button>
+                        <li v-for="(quest,i) in toDo">
+                            <i class="fas fa-pen" @click="modifyFunc(i)"></i>{{ quest }}
+                            <i class="fas fa-check-circle" @click="completeFunc(i)"></i>
                         </li>
                     </ul>
                     <h2 v-else>Niente da fare, pomeriggio Libero!!!</h2>
@@ -30,16 +32,16 @@
                 <div>
                     <h2 v-if="compleArr.length > 0">Done</h2>
                     <ul>
-                        <li v-for="(done,i) in compleArr">{{done}}
-                            <button class="btn_list" @click="removeFunc(i)">V</button>
+                        <li v-for="(done,i) in compleArr">{{ done }}
+                            <i class="fas fa-minus-circle" @click="removeFunc(i)"></i>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h2 v-if="deleteArr.length > 0">Deleted</h2>
+                    <h2 v-if="deleteArr.length > 0">Deleted</h2><i class="fas fa-trash" v-if="deleteArr.length > 0" @click="delAllFunc"></i>
                     <ul>
-                        <li v-for="(del in deleteArr">{{del}}
-                            <button class="btn_list" @click="delAllFunc">X</button>
+                        <li v-for="(del in deleteArr">
+                            {{ del }}   
                         </li>
                     </ul>
                 </div>
