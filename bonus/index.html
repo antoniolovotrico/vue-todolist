@@ -10,14 +10,16 @@
     <body>
         <!--Create a div to plug with Vue Istance -->
         <div id="app">
+            <h1>To Do List</h1>
             <!-- Insert an img dynamically with the use of data Vue-Slider and v-bind:src-->
             <img v-bind:src="image" alt="">
             <div>
+                <!-- Insert input box and button to add tasks to our list with the hel of the function -->
                 <input v-model="newTask" @keyup.enter="addFunc">
                 <span v-if="newTask.length < 4 && newTask">La task non può essere identificata se inferiore a 4 lettere</span>
                 <button id="btn_add" @click="addFunc">Add</button>
             </div>
-            <h1>To Do List</h1>
+            
             <div id="column_box">
                 <div class="col">
                     <h2>To Do</h2>
@@ -45,8 +47,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            
+            </div>       
 
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
