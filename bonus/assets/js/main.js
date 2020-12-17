@@ -40,5 +40,9 @@ let app = new Vue({
             let canc = this.compleArr.splice(i,1);
             this.deleteArr.push(...canc);
         },
+        delAllFunc() {
+            this.deleteArr.splice(0);
+            
+        },
     }
 })

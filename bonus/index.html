@@ -22,7 +22,7 @@
                     <h2>To Do</h2>
                     <ul v-if="toDo.length">
                         <li v-for="(quest,i) in toDo"><button class="btn_list" @click="modifyFunc(i)">M</button>{{quest}}
-                            <button class="btn_list" @click="completeFunc(i)">X</button>
+                            <button class="btn_list" @click="completeFunc(i)">D</button>
                         </li>
                     </ul>
                     <h2 v-else>Niente da fare, pomeriggio Libero!!!</h2>
@@ -38,8 +38,8 @@
                 <div>
                     <h2 v-if="deleteArr.length > 0">Deleted</h2>
                     <ul>
-                        <li v-for="(del,i) in deleteArr">{{del}}
-                            <button class="btn_list" @click="removeFunc(i)">V</button>
+                        <li v-for="(del in deleteArr">{{del}}
+                            <button class="btn_list" @click="delAllFunc">X</button>
                         </li>
                     </ul>
                 </div>
