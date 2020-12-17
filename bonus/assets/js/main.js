@@ -14,10 +14,9 @@ let app = new Vue({
         newTask : "",
         // add an image to pass dinamically to the DOM
         image : "./assets/img/todoimg.png", 
-        // create an empty key to show message of no task to do 
-        complete : "",
+        // create an empty array where to push completed tasks  
         compleArr : [],
-        delete : "",
+        // create an empty array where to push deleted tasks 
         deleteArr : []
     },
     //create two function in methods, one to add tasks and another to remove them.
@@ -29,18 +28,17 @@ let app = new Vue({
             }
         },
         completeFunc(i) {
-            this.complete = this.toDo.splice(i,1);
-            // console.log(this.complete);
-            this.compleArr.push(this.complete);
+            let complete = this.toDo.splice(i,1);
+            this.compleArr= [...this.compleArr,...complete];
         },
-        modifyFunc() {
-            document.createElement("input");
+        modifyFunc(i) {
+            let newInp = prompt("Modifica il testo della tua Task");
+            this.toDo.splice(i,1,newInp);
             
         },
         removeFunc(i) {
-            this.delete = this.compleArr.splice(i,1);
-            // console.log(this.complete);
-            this.deleteArr.push(this.delete);
+            let canc = this.compleArr.splice(i,1);
+            this.deleteArr.push(...canc);
         },
     }
 })

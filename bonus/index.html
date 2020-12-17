@@ -13,26 +13,36 @@
             <img v-bind:src="image" alt="">
             <div>
                 <input v-model="newTask" @keyup.enter="addFunc">
+                <span v-if="newTask.length < 4 && newTask">La task non può essere identificata se inferiore a 4 lettere</span>
                 <button id="btn_add" @click="addFunc">Add</button>
             </div>
             <h1>To Do List</h1>
             <div id="column_box">
-                <ul v-if="toDo.length">
-                    <li v-for="(quest,i) in toDo"><button class="btn_list" @click="modifyFunc(i)">M</button>{{quest}}
-                        <button class="btn_list" @click="completeFunc(i)">X</button>
-                    </li>
-                </ul>
-                <h2 v-else>Niente da fare, pomeriggio Libero!!!</h2>
-                <ul>
-                    <li v-for="(done,i) in compleArr">{{done}}
-                        <button class="btn_list" @click="removeFunc(i)">V</button>
-                    </li>
-                </ul>
-                <ul>
-                    <li v-for="(del,i) in deleteArr">{{del}}
-                        <button class="btn_list" @click="removeFunc(i)">V</button>
-                    </li>
-                </ul>
+                <div>
+                    <h2>To Do</h2>
+                    <ul v-if="toDo.length">
+                        <li v-for="(quest,i) in toDo"><button class="btn_list" @click="modifyFunc(i)">M</button>{{quest}}
+                            <button class="btn_list" @click="completeFunc(i)">X</button>
+                        </li>
+                    </ul>
+                    <h2 v-else>Niente da fare, pomeriggio Libero!!!</h2>
+                </div>
+                <div>
+                    <h2 v-if="compleArr.length > 0">Done</h2>
+                    <ul>
+                        <li v-for="(done,i) in compleArr">{{done}}
+                            <button class="btn_list" @click="removeFunc(i)">V</button>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 v-if="deleteArr.length > 0">Deleted</h2>
+                    <ul>
+                        <li v-for="(del,i) in deleteArr">{{del}}
+                            <button class="btn_list" @click="removeFunc(i)">V</button>
+                        </li>
+                    </ul>
+                </div>
             </div>
             
 
