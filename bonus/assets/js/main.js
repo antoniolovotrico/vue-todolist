@@ -47,8 +47,12 @@ let app = new Vue({
         },
         //Function to empty the deleted list
         delAllFunc() {
-            this.deleteArr.splice(0);
-            
+            this.deleteArr.splice(0);     
         },
+        //Functione to restore tasks in to-do list
+        reAddFunc(i) {
+            let reAdd = this.deleteArr.splice(i,1);
+            this.toDo.push(reAdd[i]);
+        }
     }
 })

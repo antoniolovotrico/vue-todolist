@@ -42,8 +42,9 @@
                 <div class="col">
                     <h2>Deleted</h2><i class="fas fa-trash" @click="delAllFunc"></i>
                     <ul>
-                        <li v-for="(del in deleteArr">
-                            {{ del }}   
+                        <li v-for="(del,i) in deleteArr">
+                            {{ del }} 
+                            <i class="fas fa-undo" @click="reAddFunc(i)"></i>  
                         </li>
                     </ul>
                 </div>
