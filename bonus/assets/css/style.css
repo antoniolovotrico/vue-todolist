@@ -6,7 +6,7 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    height:100vh;
     background-color:lightblue;
     display: flex;
     flex-direction: column;
@@ -24,9 +24,10 @@ body {
 
 img{
     
-    width: 100vw;
-    padding: 50px;
+    width: 50%;
+    padding: 30px;
     align-content: center;
+    border-radius: 100px;
 }
 input{
     align-items: center;
@@ -34,7 +35,7 @@ input{
 
 
 h1{
-    padding: 20px;
+    padding-top: 20px;
     font-size: 3rem;
 }
 #column_box{
@@ -56,11 +57,17 @@ i{
 
 .col{
     width: 30vw;
+    height: 35vh;
     background-color: beige;
     margin: 10px;
-    border-radius: 10px;
-    box-shadow: 5px 5px blue, 10px 10px black;
+    border-radius: 20px;
+    box-shadow: 5px 5px blue, 10px 10px black;    
 }
+ul {
+    height: 30vh;
+    overflow-y: scroll;
+}
+
 h2{
     padding: 10px;
 }
