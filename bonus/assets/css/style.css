@@ -16,20 +16,38 @@ body {
 }
 #app{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 img{
+    
     width: 400px;
     padding: 50px;
-    display: block;
+    align-content: center;
+}
+input{
+    align-items: center;
+}
+#btn_add {
+    
 }
 
 h1{
     padding: 20px;
 }
+#column_box{
+    display: flex;
+}
 
 ul {
     list-style: square;
+    background-color: beige;
+    border-radius: 5%;
+    padding: 10px;
+    margin: 10px;
 }
 
 li {

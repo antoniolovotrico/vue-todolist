@@ -14,7 +14,8 @@ let app = new Vue({
         newTask : "",
         // add an image to pass dinamically to the DOM
         image : "./assets/img/todoimg.png", 
-        // create an empty key to show message of no task to do  
+        // create an empty key to show message of no task to do 
+        complete : [] 
     },
     //create two function in methods, one to add tasks and another to remove them.
     methods: {
@@ -25,7 +26,8 @@ let app = new Vue({
             }
         },
         removeFunc(i) {
-            this.toDo.splice(i,1);
+            this.complete = this.toDo.splice(i,1);
+            // console.log(this.complete);
         }
     }
 })
