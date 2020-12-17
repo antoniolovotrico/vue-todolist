@@ -64,7 +64,7 @@ i{
     box-shadow: 5px 5px blue, 10px 10px black;    
 }
 ul {
-    height: 30vh;
+    height: 25vh;
     overflow-y: scroll;
 }
 
